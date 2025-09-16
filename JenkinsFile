@@ -2,22 +2,27 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Checkout Code') {
             steps {
-                echo 'Building Application...'
-                echo 'Application built Successfully...'
+                git 'https://github.com/sumudu-v/SpringBootSample02'
+            }
+        }
+        stage('Buld') {
+            steps {
+                sh 'echo "Building Application..."'
+                sh 'echo "Application Built..."'
             }
         }
         stage('Test') {
             steps {
-                echo 'Running Tests...'
-                echo 'Tests Executed Successfully...'
+                sh 'echo "Running Tests..."'
+                sh 'echo "Tests Completed Successfully..."'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying Application...'
-                echo 'Application Deployed Successfully...'
+                sh 'echo "Deploying Application..."'
+                sh 'echo "Application deployed Successfully..."{'
             }
         }
     }
