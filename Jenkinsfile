@@ -9,30 +9,30 @@ pipeline {
         }
         stage('Buld') {
             steps {
-                sh 'echo "Building Application..."'
-                sh 'echo "Application Built..."'
+                echo "Building Application..."
+                echo "Application Built..."
             }
         }
         stage('Test') {
             steps {
-                sh 'echo "Running Tests..."'
-                sh 'echo "Tests Completed Successfully..."'
+                echo "Running Tests..."
+                echo "Tests Completed Successfully..."
             }
         }
         stage('Deploy') {
             steps {
-                sh 'echo "Deploying Application..."'
-                sh 'echo "Application deployed Successfully..."'
+                echo "Deploying Application..."
+                echo "Application deployed Successfully..."
             }
         }
     }
 
     post {
         success {
-            sh 'echo "Build Successful..."'
+            echo "Build Successful..."
         }
         failure {
-            sh 'echo "Build Failed..."'
+            echo "Build Failed..."
         }
     }
 }
