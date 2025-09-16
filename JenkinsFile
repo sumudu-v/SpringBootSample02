@@ -22,7 +22,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'echo "Deploying Application..."'
-                sh 'echo "Application deployed Successfully..."{'
+                sh 'echo "Application deployed Successfully..."'
             }
         }
     }
